@@ -1,18 +1,15 @@
-{%  extends 'base.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block body %}
-{# dump() #}
-
-<h1>Welcome, página Home</h1>
-
-<div>
+<div class="p-4 mb-4 bg-light rounded-3">
     {{ form(form) }}
 </div>
 
-{% for comment in comments %}
-
-    <p>{{ comment.body }}</p>
-
-{% endfor %}
-
+<div class="px-5 mb-4">
+    {% for comment in comments %}
+        <div class="py-3 border-bottom">
+            {{ comment.body|markdown_to_html }}
+        </div>
+    {% endfor %}
+</div>
 {% endblock %}
