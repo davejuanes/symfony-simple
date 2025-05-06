@@ -5,6 +5,10 @@
 
 <h1>Welcome, página Home</h1>
 
+<div>
+    {{ form(form) }}
+</div>
+
 {% for comment in comments %}
 
     <p>{{ comment.body }}</p>
