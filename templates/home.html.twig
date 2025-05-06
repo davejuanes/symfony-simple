@@ -5,8 +5,10 @@
 
 <h1>Welcome, página Home</h1>
 
-<p>
-    {{ search }}
-</p>
+{% for comment in comments %}
+
+    <p>{{ comment.body }}</p>
+
+{% endfor %}
 
 {% endblock %}
